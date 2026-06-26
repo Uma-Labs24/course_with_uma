@@ -319,6 +319,14 @@ grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
 gap:25px;
 }
 
+
+.note-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+}
+
+
 .card{
 background:white;
 border-radius:18px;
