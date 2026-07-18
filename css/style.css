@@ -1081,3 +1081,19 @@ body.dark .faq-item {
 }
 
 }
+
+
+.close-btn{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.close-btn:hover{
+    color: red;
+}
