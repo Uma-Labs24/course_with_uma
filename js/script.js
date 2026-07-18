@@ -182,3 +182,15 @@ if (members) {
     observer.observe(members);
 
 }
+
+
+
+
+const menuBtn = document.getElementById("menuBtn");
+const popupMenu = document.getElementById("popupMenu");
+
+menuBtn.addEventListener("click", () => {
+
+    popupMenu.classList.toggle("show");
+
+});
