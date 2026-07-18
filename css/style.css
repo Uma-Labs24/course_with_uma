@@ -1085,14 +1085,15 @@ body.dark .faq-item {
 
 
 .close-btn{
-    position:absolute;
-    top:15px;
-    right:20px;
-    font-size:40px;
-    color:#fff;
-    cursor:pointer;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 40px !important;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
 .close-btn:hover{
-    color:red;
+    color: red;
 }
