@@ -1085,43 +1085,14 @@ body.dark .faq-item {
 
 
 .close-btn{
-    position: absolute;
-    top: 10px;
-    left: 10px;
-
-    display: inline-block;
-    background: none;
-    border: none;
-    outline: none;
-    box-shadow: none;
-
-    padding: 0;
-    margin: 0;
-
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
-
-    color: #fff;
-    font-size: 50px;
-    font-weight: bold;
-    text-align: center;
-
-    cursor: pointer;
-
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
+    position:absolute;
+    top:15px;
+    right:20px;
+    font-size:40px;
+    color:#fff;
+    cursor:pointer;
 }
 
 .close-btn:hover{
-    color: red;
-}
-
-.close-btn:focus,
-.close-btn:active{
-    outline: none;
-    border: none;
-    box-shadow: none;
-    background: none;
+    color:red;
 }
