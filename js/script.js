@@ -186,7 +186,7 @@ if (members) {
 
 
 
-const menuBtn = document.getElementById("menuBtn");
+/*const menuBtn = document.getElementById("menuBtn");
 const sideMenu = document.getElementById("sideMenu");
 
 if(menuBtn && sideMenu){
@@ -195,6 +195,24 @@ if(menuBtn && sideMenu){
 
         sideMenu.classList.toggle("active");
 
+    });
+
+} */
+
+const menuBtn = document.getElementById("menuBtn");
+const sideMenu = document.getElementById("sideMenu");
+const closeBtn = document.getElementById("closeBtn");
+
+if (menuBtn && sideMenu && closeBtn) {
+
+    // Open/Close using ☰ button
+    menuBtn.addEventListener("click", function () {
+        sideMenu.classList.toggle("active");
+    });
+
+    // Close using ✖ button
+    closeBtn.addEventListener("click", function () {
+        sideMenu.classList.remove("active");
     });
 
 }
