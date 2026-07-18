@@ -1026,3 +1026,58 @@ body.dark .faq-item {
 .offer-subtext{
     margin-top:5px;
 }
+
+
+
+
+
+
+
+
+.menu-btn{
+    font-size:25px;
+    border:none;
+    background:none;
+    cursor:pointer;
+}
+
+
+.popup-menu{
+
+    position:absolute;
+    right:20px;
+    top:70px;
+
+    background:white;
+
+    width:220px;
+
+    display:none;
+
+    flex-direction:column;
+
+    padding:20px;
+
+    border-radius:10px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,0.2);
+
+}
+
+
+.popup-menu a{
+
+    text-decoration:none;
+
+    color:black;
+
+    padding:12px;
+
+}
+
+
+.popup-menu.show{
+
+    display:flex;
+
+}
