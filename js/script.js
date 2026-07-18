@@ -187,10 +187,10 @@ if (members) {
 
 
 const menuBtn = document.getElementById("menuBtn");
-const popupMenu = document.getElementById("popupMenu");
+const sideMenu = document.getElementById("sideMenu");
 
-menuBtn.addEventListener("click", () => {
+menuBtn.addEventListener("click", function(){
 
-    popupMenu.classList.toggle("show");
+    sideMenu.classList.toggle("active");
 
 });
