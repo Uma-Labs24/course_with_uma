@@ -1031,53 +1031,53 @@ body.dark .faq-item {
 
 
 
-
-
-
 .menu-btn{
-    font-size:25px;
-    border:none;
     background:none;
+    border:none;
+    font-size:26px;
     cursor:pointer;
 }
 
 
-.popup-menu{
+.side-menu{
 
-    position:absolute;
-    right:20px;
-    top:70px;
+    position:fixed;
+    top:0;
+    right:-300px;
+
+    width:250px;
+    height:100%;
 
     background:white;
 
-    width:220px;
-
-    display:none;
-
-    flex-direction:column;
-
-    padding:20px;
-
-    border-radius:10px;
-
-    box-shadow:0 5px 20px rgba(0,0,0,0.2);
-
-}
-
-
-.popup-menu a{
-
-    text-decoration:none;
-
-    color:black;
-
-    padding:12px;
-
-}
-
-
-.popup-menu.show{
+    padding-top:80px;
 
     display:flex;
+    flex-direction:column;
+
+    transition:0.3s;
+
+    z-index:1000;
+
+    box-shadow:-5px 0 15px rgba(0,0,0,0.2);
+}
+
+
+.side-menu a{
+
+    text-decoration:none;
+    color:black;
+
+    padding:15px 25px;
+
+    font-size:18px;
+}
+
+
+.side-menu.active{
+
+    right:0;
+
+}
 
 }
