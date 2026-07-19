@@ -1030,16 +1030,37 @@ body.dark .faq-item {
 
 
 
-
 .menu-btn{
-    background: none;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+
+    width: 48px;
+    height: 48px;
+
+    background: transparent;
+    color: #000 !important;
+
     border: none;
-    font-size: 26px;
+    outline: none;
+
+    font-size: 36px !important;
+    font-weight: bold;
+    line-height: 1;
+
     cursor: pointer;
-    color: black;
-    transition: color 0.3s ease;
+
+    visibility: visible !important;
+    opacity: 1 !important;
+
+    position: relative;
+    z-index: 99999;
 }
 
+.menu-btn:hover{
+    color: #2563eb !important;
+    transform: scale(1.1);
+}
 
 
 .side-menu{
