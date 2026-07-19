@@ -1,0 +1,37 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width,initial-scale=1'>
+<title>Articles | CourseWithUma</title><style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI,sans-serif}body{background:#f4f7fb;color:#333}
+header,footer{background:#0f172a;color:#fff;text-align:center;padding:18px}header{font-size:30px;font-weight:700}
+.wrap{max-width:1150px;margin:auto;padding:30px}.hero,.card{background:#fff;border-radius:16px;box-shadow:0 8px 25px rgba(0,0,0,.08)}
+.hero{padding:30px;margin-bottom:25px}.hero h2{color:#2563eb}.hero p{line-height:1.8;margin-top:10px}
+input{width:100%;padding:14px;border:1px solid #ccc;border-radius:10px;margin:20px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.card{padding:22px;border-left:5px solid #2563eb;transition:.3s}.card:hover{transform:translateY(-6px)}
+.tag{background:#eaf2ff;color:#2563eb;padding:5px 10px;border-radius:20px;font-size:12px}
+.card h3{margin:10px 0;color:#2563eb}.btn,.back{display:inline-block;background:#2563eb;color:#fff;text-decoration:none;padding:10px 18px;border-radius:8px;margin-top:15px;border:none;cursor:pointer}
+.reveal{opacity:0;transform:translateY(25px);transition:.6s}.show{opacity:1;transform:none}
+.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.65);padding:25px;overflow:auto}.box{max-width:900px;margin:40px auto;background:#fff;padding:30px;border-radius:15px}.close{float:right;font-size:28px;cursor:pointer}
+</style></head><body>
+<header>CourseWithUma Articles</header>
+<div class='wrap'>
+<div class='hero reveal'><h2>📚 Learn. Practice. Build. Succeed.</h2><p>Welcome to the CourseWithUma Articles section. Here you'll find beginner-friendly roadmaps, programming guides, career advice, coding tips, and practical learning resources. Every article is designed to help you gain real-world skills and become industry-ready.</p></div>
+<input id='search' placeholder='🔍 Search articles...'>
+<div class='grid' id='grid'></div>
+<div style='text-align:center'><a class='back' href='home.html'>⬅ Back to Home</a></div>
+</div>
+<div class='modal' id='m'><div class='box'><span class='close' onclick='m.style.display="none"'>&times;</span><div id='content'></div></div></div>
+<footer>© 2026 CourseWithUma</footer>
+<script>
+const data=[
+["C Programming","🧠 Complete C Programming Roadmap","Master variables, operators, loops, functions and projects.","<h2>🧠 Complete C Programming Roadmap</h2><p>🌟 C is one of the best languages to build programming logic. Start with syntax, variables, data types, operators, input/output, conditional statements, loops, arrays, strings, functions, pointers, structures and file handling. Practice at least 5-10 programs for every topic. Build mini projects like Calculator, Student Management System and Banking System. 🚀</p><p>✅ Roadmap:<br>1. Basics<br>2. Operators<br>3. Control Statements<br>4. Functions<br>5. Arrays & Strings<br>6. Pointers<br>7. Structures<br>8. File Handling<br>9. Projects<br>10. Interview Questions</p><p>💡 Tip: Practice daily instead of only watching videos.</p>"],
+["Python","🐍 Python Learning Guide","Easy roadmap for beginners.","<h2>🐍 Python Complete Roadmap</h2><p>🚀 Start with Python syntax, variables, operators, loops, functions, lists, tuples, dictionaries, sets and file handling. Then learn Object-Oriented Programming, modules, exception handling and APIs.</p><p>🛠️ Build projects like Calculator, To-Do App, Weather App, Automation Scripts, Web Scraper, Chatbot and Flask/Django applications.</p><p>📍 Roadmap:<br>1. Basics<br>2. Data Structures<br>3. Functions<br>4. OOP<br>5. File Handling<br>6. APIs<br>7. Flask/Django<br>8. SQL<br>9. Projects<br>10. Interview Preparation.</p><p>💡 Practice daily and solve coding challenges.</p>"],
+["Java","☕ Java Developer Path","Backend roadmap.","<h2>☕ Java Developer Roadmap</h2><p>📘 Learn Core Java, variables, loops, OOP, inheritance, polymorphism, collections, exception handling, JDBC and multithreading.</p><p>🌐 Next, master Spring Boot, REST APIs, MySQL, Maven, Git and deployment.</p><p>📍 Roadmap:<br>1. Core Java<br>2. OOP<br>3. Collections<br>4. JDBC<br>5. SQL<br>6. Spring Boot<br>7. REST API<br>8. Projects<br>9. DSA<br>10. Placement Preparation.</p><p>🏆 Build Banking, Library, Student Management and E-Commerce projects.</p>"],
+["Frontend","🎨 Frontend Development","HTML CSS JS roadmap.","<h2>🎨 Frontend Developer Roadmap</h2><p>✨ Learn HTML, semantic tags, forms and accessibility. Continue with CSS, Flexbox, Grid, animations and responsive design.</p><p>⚡ Master JavaScript, DOM, ES6, APIs, Git, GitHub and React. Learn basic deployment using GitHub Pages or Netlify.</p><p>📍 Roadmap:<br>1. HTML<br>2. CSS<br>3. Responsive Design<br>4. JavaScript<br>5. DOM<br>6. APIs<br>7. Git & GitHub<br>8. React<br>9. Projects<br>10. Portfolio.</p><p>🎯 Build Landing Pages, Dashboards, Portfolio Websites, E-commerce UI and Course Platforms.</p>"]
+];
+const grid=document.getElementById('grid');
+function render(list){grid.innerHTML='';list.forEach((d,i)=>grid.innerHTML+=`<div class="card reveal"><span class=tag>${d[0]}</span><h3>${d[1]}</h3><p>${d[2]}</p><button class=btn onclick="openArt(${i})">Read More</button></div>`);obs();}
+render(data);
+function openArt(i){content.innerHTML=data[i][3];m.style.display='block'}
+search.oninput=()=>{let t=search.value.toLowerCase();render(data.filter(x=>x.join(' ').toLowerCase().includes(t)))}
+function obs(){const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}));document.querySelectorAll('.reveal').forEach(e=>io.observe(e));}
+</script></body></html>
