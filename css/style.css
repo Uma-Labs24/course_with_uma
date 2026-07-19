@@ -1032,13 +1032,17 @@ body.dark .faq-item {
 
 
 .menu-btn{
-    background:none;
-    border:none;
-    font-size:26px;
-    cursor:pointer;
-    colour: yellow;
+    background: none;
+    border: none;
+    font-size: 26px;
+    cursor: pointer;
+    color: black;
+    transition: color 0.3s ease;
 }
 
+body.dark .menu-btn{
+    color: white;
+}
 
 .side-menu{
 
